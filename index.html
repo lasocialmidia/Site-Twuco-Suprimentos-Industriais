@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Twuco Suprimentos Industriais e MRO – Mogi das Cruzes e Região</title>
+  <meta name="description" content="Twuco Suprimentos Industriais e MRO – ferramentas, materiais de construção, instalação e suprimentos industriais em Mogi das Cruzes e região. Atendimento rápido via WhatsApp." />
+  <meta name="keywords" content="suprimentos industriais, MRO, ferramentas, materiais construção, Mogi das Cruzes, fornecedor industrial" />
+  <meta property="og:title" content="Twuco Suprimentos Industriais – Fornecedor Confiável em Mogi das Cruzes" />
+  <meta property="og:description" content="Entrega rápida, grande variedade de produtos e atendimento direto via WhatsApp." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #E8500A;
+      --orange-light: #FF6B2B;
+      --orange-dark: #C43E00;
+      --navy: #0F1923;
+      --navy-2: #1A2635;
+      --gray-100: #F7F8FA;
+      --gray-200: #ECEEF2;
+      --gray-400: #9AA3B0;
+      --gray-600: #5A6473;
+      --gray-800: #2D3642;
+      --white: #FFFFFF;
+      --radius: 12px;
+      --radius-lg: 20px;
+      --shadow: 0 4px 24px rgba(15,25,35,0.08);
+      --shadow-lg: 0 12px 48px rgba(15,25,35,0.14);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--white);
+      color: var(--navy);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── TYPOGRAPHY ── */
+    h1, h2, h3, h4 { font-family: 'Syne', sans-serif; line-height: 1.15; }
+
+    /* ── UTILITIES ── */
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 96px 0; }
+    .section-sm { padding: 64px 0; }
+    .tag {
+      display: inline-block;
+      background: rgba(232,80,10,0.1);
+      color: var(--orange);
+      font-family: 'Syne', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 40px;
+      margin-bottom: 20px;
+    }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 32px;
+      border-radius: 50px;
+      font-family: 'Syne', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-primary {
+      background: var(--orange);
+      color: var(--white);
+      box-shadow: 0 6px 28px rgba(232,80,10,0.35);
+    }
+    .btn-primary:hover {
+      background: var(--orange-light);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 36px rgba(232,80,10,0.45);
+    }
+    .btn-white {
+      background: var(--white);
+      color: var(--orange);
+      box-shadow: var(--shadow-lg);
+    }
+    .btn-white:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 48px rgba(15,25,35,0.18);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,0.4);
+    }
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: var(--white);
+    }
+    .btn-lg { padding: 20px 44px; font-size: 18px; }
+    .microcopy {
+      display: block;
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.03em;
+      opacity: 0.75;
+      margin-top: 4px;
+    }
+    .btn-wrapper { display: flex; flex-direction: column; align-items: flex-start; gap: 0; }
+    .btn-wrapper .microcopy { color: var(--gray-600); font-size: 12px; margin-top: 8px; text-align: center; width: 100%; }
+
+    /* ── NAV ── */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 16px 0;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--gray-200);
+      transition: box-shadow 0.3s;
+    }
+    .nav.scrolled { box-shadow: var(--shadow); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .nav-logo-icon {
+      width: 40px; height: 40px;
+      background: var(--navy);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .nav-logo-icon svg { width: 22px; height: 22px; }
+    .logo-text { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 18px; color: var(--navy); }
+    .logo-sub { display: block; font-size: 10px; font-weight: 400; color: var(--gray-400); letter-spacing: 0.05em; font-family: 'DM Sans', sans-serif; }
+    .nav-cta { font-size: 14px; padding: 10px 22px; }
+
+    /* ── HERO ── */
+    .hero {
+      padding-top: 140px;
+      padding-bottom: 100px;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 60%, #0F2336 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -120px; right: -120px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(232,80,10,0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -80px;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(232,80,10,0.10) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .hero-tag {
+      background: rgba(232,80,10,0.2);
+      color: #FF9166;
+      border: 1px solid rgba(232,80,10,0.3);
+    }
+    .hero h1 {
+      font-size: clamp(36px, 4.5vw, 58px);
+      color: var(--white);
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+    .hero h1 span { color: var(--orange-light); }
+    .hero p {
+      font-size: 18px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 36px;
+      max-width: 480px;
+      line-height: 1.7;
+    }
+    .hero-cta-group { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .hero-badges {
+      display: flex;
+      gap: 12px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+    .hero-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 40px;
+      padding: 8px 16px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.8);
+    }
+    .hero-badge svg { width: 14px; height: 14px; color: var(--orange-light); }
+
+    /* Hero Illustration */
+    .hero-visual {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-card-main {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      backdrop-filter: blur(8px);
+      width: 100%;
+      max-width: 380px;
+    }
+    .hero-card-icon {
+      width: 64px; height: 64px;
+      background: var(--orange);
+      border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px;
+    }
+    .hero-card-icon svg { width: 32px; height: 32px; color: white; }
+    .hero-card-main h3 {
+      color: white;
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+    .hero-card-main p { color: rgba(255,255,255,0.6); font-size: 14px; }
+    .hero-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .hero-stat {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      padding: 16px;
+      text-align: center;
+    }
+    .hero-stat strong {
+      display: block;
+      font-family: 'Syne', sans-serif;
+      font-size: 24px;
+      color: var(--orange-light);
+    }
+    .hero-stat span { font-size: 12px; color: rgba(255,255,255,0.5); }
+    .float-pill {
+      position: absolute;
+      background: var(--white);
+      border-radius: 50px;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--navy);
+      box-shadow: var(--shadow-lg);
+    }
+    .float-pill.p1 { top: -20px; right: 20px; }
+    .float-pill.p2 { bottom: 10px; left: -20px; }
+    .float-pill .dot { width: 8px; height: 8px; border-radius: 50%; background: #22C55E; }
+
+    /* ── BREAK PATTERN ── */
+    .break-pattern {
+      background: var(--orange);
+      padding: 48px 0;
+      text-align: center;
+    }
+    .break-pattern p {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(20px, 2.5vw, 30px);
+      font-weight: 700;
+      color: var(--white);
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.3;
+    }
+    .break-pattern p span {
+      border-bottom: 3px solid rgba(255,255,255,0.5);
+    }
+
+    /* ── PROBLEM ── */
+    .problem { background: var(--gray-100); }
+    .problem-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .problem h2 { font-size: clamp(28px, 3vw, 42px); letter-spacing: -0.02em; margin-bottom: 20px; }
+    .problem-intro { font-size: 17px; color: var(--gray-600); margin-bottom: 36px; }
+    .pain-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+    .pain-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+    }
+    .pain-icon {
+      width: 40px; height: 40px; min-width: 40px;
+      background: rgba(239,68,68,0.1);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .pain-icon svg { width: 18px; height: 18px; color: #EF4444; }
+    .pain-item strong { display: block; font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+    .pain-item span { font-size: 13px; color: var(--gray-600); }
+    .problem-visual {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .problem-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      border-left: 4px solid #EF4444;
+    }
+    .problem-card h4 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .problem-card p { font-size: 14px; color: var(--gray-600); }
+    .problem-card.accent { border-left-color: var(--orange); }
+
+    /* ── SOLUTION ── */
+    .solution { background: var(--white); }
+    .solution-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .solution h2 { font-size: clamp(28px, 3vw, 42px); letter-spacing: -0.02em; margin-bottom: 20px; }
+    .solution-intro { font-size: 17px; color: var(--gray-600); margin-bottom: 36px; }
+    .solution-points { display: flex; flex-direction: column; gap: 20px; margin-bottom: 36px; }
+    .sol-point { display: flex; align-items: flex-start; gap: 16px; }
+    .sol-num {
+      width: 36px; height: 36px; min-width: 36px;
+      background: var(--orange);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Syne', sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      color: white;
+    }
+    .sol-point strong { display: block; font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+    .sol-point span { font-size: 14px; color: var(--gray-600); }
+    .solution-visual {
+      background: linear-gradient(135deg, var(--navy), var(--navy-2));
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      text-align: center;
+    }
+    .solution-visual h3 { color: white; font-size: 22px; margin-bottom: 8px; }
+    .solution-visual p { color: rgba(255,255,255,0.6); font-size: 14px; margin-bottom: 28px; }
+    .sol-vis-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .sol-vis-stat {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius);
+      padding: 20px;
+    }
+    .sol-vis-stat strong {
+      display: block;
+      font-family: 'Syne', sans-serif;
+      font-size: 28px;
+      color: var(--orange-light);
+      margin-bottom: 4px;
+    }
+    .sol-vis-stat span { font-size: 12px; color: rgba(255,255,255,0.5); }
+
+    /* ── BENEFITS ── */
+    .benefits { background: var(--gray-100); }
+    .benefits h2 {
+      font-size: clamp(28px, 3vw, 42px);
+      letter-spacing: -0.02em;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .benefits-sub {
+      text-align: center;
+      font-size: 17px;
+      color: var(--gray-600);
+      max-width: 520px;
+      margin: 0 auto 56px;
+    }
+    .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .benefit-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow);
+      transition: transform 0.25s, box-shadow 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+    .benefit-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--orange);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s;
+    }
+    .benefit-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .benefit-card:hover::before { transform: scaleX(1); }
+    .benefit-icon {
+      width: 52px; height: 52px;
+      background: rgba(232,80,10,0.1);
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px;
+    }
+    .benefit-icon svg { width: 24px; height: 24px; color: var(--orange); }
+    .benefit-card h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+    .benefit-card p { font-size: 14px; color: var(--gray-600); line-height: 1.65; }
+
+    /* ── PRODUCTS ── */
+    .products { background: var(--white); }
+    .products h2 {
+      font-size: clamp(28px, 3vw, 42px);
+      letter-spacing: -0.02em;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .products-sub {
+      text-align: center;
+      font-size: 17px;
+      color: var(--gray-600);
+      max-width: 520px;
+      margin: 0 auto 56px;
+    }
+    .products-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+    .product-card {
+      background: var(--gray-100);
+      border-radius: var(--radius-lg);
+      padding: 28px 20px;
+      text-align: center;
+      border: 2px solid transparent;
+      transition: all 0.25s;
+      cursor: default;
+    }
+    .product-card:hover {
+      border-color: var(--orange);
+      background: var(--white);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+    .product-icon {
+      width: 60px; height: 60px;
+      background: var(--navy);
+      border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .product-card:hover .product-icon { background: var(--orange); }
+    .product-icon svg { width: 28px; height: 28px; color: white; }
+    .product-card h3 { font-size: 14px; font-weight: 700; color: var(--navy); line-height: 1.4; }
+    .products-cta { text-align: center; margin-top: 48px; }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials { background: var(--gray-100); }
+    .testimonials h2 {
+      font-size: clamp(28px, 3vw, 42px);
+      letter-spacing: -0.02em;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .testimonials-sub {
+      text-align: center;
+      font-size: 17px;
+      color: var(--gray-600);
+      max-width: 520px;
+      margin: 0 auto 56px;
+    }
+    .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .testi-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+    .testi-quote {
+      font-size: 48px;
+      font-family: Georgia, serif;
+      color: var(--orange);
+      line-height: 0.8;
+      margin-bottom: 16px;
+    }
+    .testi-card p {
+      font-size: 15px;
+      color: var(--gray-600);
+      line-height: 1.7;
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+    .testi-author { display: flex; align-items: center; gap: 12px; }
+    .testi-avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: var(--navy);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      color: white;
+      font-size: 16px;
+    }
+    .testi-author strong { display: block; font-size: 14px; font-weight: 700; color: var(--navy); }
+    .testi-author span { font-size: 12px; color: var(--gray-400); }
+    .stars { color: #F59E0B; font-size: 14px; margin-bottom: 4px; }
+
+    /* ── AUTHORITY ── */
+    .authority {
+      background: linear-gradient(135deg, var(--navy) 0%, #0F2336 100%);
+      padding: 96px 0;
+      text-align: center;
+    }
+    .authority h2 {
+      font-size: clamp(28px, 3vw, 42px);
+      color: white;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .authority p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.65);
+      max-width: 580px;
+      margin: 0 auto 48px;
+    }
+    .authority-badges { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; margin-bottom: 48px; }
+    .auth-badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 50px;
+      padding: 12px 24px;
+      color: white;
+      font-size: 14px;
+    }
+    .auth-badge svg { width: 18px; height: 18px; color: var(--orange-light); }
+    .auth-cnpj {
+      display: inline-block;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      padding: 16px 32px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* ── OFFER ── */
+    .offer {
+      background: var(--orange);
+      padding: 96px 0;
+    }
+    .offer-inner { text-align: center; }
+    .offer h2 {
+      font-size: clamp(28px, 3.5vw, 48px);
+      color: white;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .offer p {
+      font-size: 18px;
+      color: rgba(255,255,255,0.85);
+      max-width: 560px;
+      margin: 0 auto 40px;
+    }
+    .offer-features { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-bottom: 40px; }
+    .offer-feat {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 50px;
+      padding: 8px 18px;
+      font-size: 13px;
+      color: white;
+      font-weight: 500;
+    }
+    .offer-feat svg { width: 14px; height: 14px; }
+
+    /* ── OBJECTIONS ── */
+    .objections { background: var(--white); }
+    .objections h2 {
+      font-size: clamp(28px, 3vw, 42px);
+      letter-spacing: -0.02em;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .objections-sub {
+      text-align: center;
+      font-size: 17px;
+      color: var(--gray-600);
+      max-width: 480px;
+      margin: 0 auto 56px;
+    }
+    .obj-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .obj-card {
+      background: var(--gray-100);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      text-align: center;
+    }
+    .obj-icon {
+      width: 60px; height: 60px;
+      background: var(--orange);
+      border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
+    }
+    .obj-icon svg { width: 28px; height: 28px; color: white; }
+    .obj-card h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+    .obj-card p { font-size: 14px; color: var(--gray-600); line-height: 1.65; }
+
+    /* ── FINAL CTA ── */
+    .final-cta {
+      background: var(--navy);
+      padding: 120px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 800px; height: 800px;
+      background: radial-gradient(circle, rgba(232,80,10,0.15) 0%, transparent 70%);
+    }
+    .final-cta h2 {
+      font-size: clamp(32px, 4vw, 52px);
+      color: white;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .final-cta p {
+      font-size: 18px;
+      color: rgba(255,255,255,0.65);
+      max-width: 520px;
+      margin: 0 auto 48px;
+      position: relative;
+    }
+    .final-cta-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; position: relative; }
+
+    /* ── FAQ ── */
+    .faq { background: var(--gray-100); }
+    .faq h2 {
+      font-size: clamp(28px, 3vw, 42px);
+      letter-spacing: -0.02em;
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .faq-list { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      padding: 22px 28px;
+      font-family: 'Syne', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--navy);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      transition: color 0.2s;
+    }
+    .faq-q:hover { color: var(--orange); }
+    .faq-icon {
+      width: 28px; height: 28px; min-width: 28px;
+      background: var(--gray-100);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      transition: transform 0.3s, background 0.3s;
+    }
+    .faq-icon svg { width: 14px; height: 14px; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--orange); }
+    .faq-item.open .faq-icon svg { color: white; }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+      padding: 0 28px;
+    }
+    .faq-a-inner { padding-bottom: 22px; font-size: 15px; color: var(--gray-600); line-height: 1.7; }
+    .faq-item.open .faq-a { max-height: 200px; }
+
+    /* ── FOOTER ── */
+    .footer {
+      background: var(--navy);
+      padding: 64px 0 32px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-brand h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 8px;
+    }
+    .footer-brand p { font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.6; max-width: 300px; margin-bottom: 20px; }
+    .footer-contact { display: flex; flex-direction: column; gap: 10px; }
+    .footer-contact a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-contact a:hover { color: var(--orange-light); }
+    .footer-contact a svg { width: 16px; height: 16px; }
+    .footer-col h4 {
+      font-family: 'Syne', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { font-size: 14px; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--orange-light); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
+      color: rgba(255,255,255,0.3);
+    }
+    .footer-cnpj { font-size: 12px; }
+
+    /* ── WHATSAPP FLOAT ── */
+    .wa-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 200;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 12px;
+    }
+    .wa-bubble {
+      background: white;
+      border-radius: 12px;
+      padding: 12px 16px;
+      box-shadow: var(--shadow-lg);
+      font-size: 13px;
+      color: var(--navy);
+      font-weight: 600;
+      opacity: 0;
+      transform: translateX(10px);
+      transition: all 0.3s;
+      white-space: nowrap;
+    }
+    .wa-bubble.show { opacity: 1; transform: translateX(0); }
+    .wa-btn {
+      width: 60px; height: 60px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 6px 28px rgba(37,211,102,0.45);
+      transition: transform 0.2s, box-shadow 0.2s;
+      position: relative;
+    }
+    .wa-btn:hover { transform: scale(1.08); box-shadow: 0 10px 40px rgba(37,211,102,0.55); }
+    .wa-btn svg { width: 28px; height: 28px; color: white; }
+    .wa-pulse {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border-radius: 50%;
+      background: rgba(37,211,102,0.4);
+      animation: pulse 2s ease-out infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.7; }
+      100% { transform: scale(1.6); opacity: 0; }
+    }
+
+    /* ── ANIMATIONS ── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .products-grid { grid-template-columns: repeat(3, 1fr); }
+      .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .section { padding: 64px 0; }
+      .hero { padding-top: 100px; padding-bottom: 64px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .hero-visual { display: none; }
+      .problem-grid { grid-template-columns: 1fr; gap: 40px; }
+      .problem-visual { display: none; }
+      .solution-grid { grid-template-columns: 1fr; gap: 40px; }
+      .benefits-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+      .products-grid { grid-template-columns: repeat(2, 1fr); }
+      .testi-grid { grid-template-columns: 1fr; }
+      .obj-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+      nav .btn { display: none; }
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+      .benefits-grid { grid-template-columns: 1fr; }
+      .products-grid { grid-template-columns: 1fr 1fr; }
+      .hero-cta-group { flex-direction: column; align-items: stretch; }
+      .hero-cta-group .btn { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="nav-logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+          </svg>
+        </div>
+        <div>
+          <span class="logo-text">Twuco</span>
+          <span class="logo-sub">Suprimentos Industriais & MRO</span>
+        </div>
+      </a>
+      <a href="https://wa.me/5511919655502" target="_blank" rel="noopener" class="btn btn-primary nav-cta">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.557 4.117 1.535 5.845L.057 23.926l6.234-1.455A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.005-1.374l-.358-.214-3.706.866.88-3.614-.234-.371A9.818 9.818 0 0 1 12 2.182c5.432 0 9.818 4.386 9.818 9.818S17.432 21.818 12 21.818z"/></svg>
+        Falar no WhatsApp
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <span class="tag hero-tag">Mogi das Cruzes e Região</span>
+          <h1>Suprimentos industriais com <span>entrega rápida</span> e fornecedor que não some</h1>
+          <p>Ferramentas, materiais de instalação, construção, pintura e MRO — tudo em um só lugar. Atendimento direto, sem enrolação.</p>
+          <div class="hero-cta-group">
+            <div class="btn-wrapper">
+              <a href="https://wa.me/5511919655502" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.557 4.117 1.535 5.845L.057 23.926l6.234-1.455A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.005-1.374l-.358-.214-3.706.866.88-3.614-.234-.371A9.818 9.818 0 0 1 12 2.182c5.432 0 9.818 4.386 9.818 9.818S17.432 21.818 12 21.818z"/></svg>
+                Falar no WhatsApp
+              </a>
+              <span class="microcopy" style="color:rgba(255,255,255,0.5);">✓ Resposta rápida &nbsp;·&nbsp; Sem compromisso</span>
+            </div>
+          </div>
+          <div class="hero-badges">
+            <div class="hero-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Entrega em Mogi das Cruzes
+            </div>
+            <div class="hero-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              +5 categorias de produto
+            </div>
+            <div class="hero-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              CNPJ ativo e regularizado
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div style="position:relative; width:100%;">
+
+            <div class="hero-card-main">
+              <div class="hero-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                </svg>
+              </div>
+              <h3>Twuco Suprimentos</h3>
+              <p>Fornecedor industrial completo para empresas e profissionais da região</p>
+              <div class="hero-stats">
+                <div class="hero-stat">
+                  <strong>+5</strong>
+                  <span>Categorias</span>
+                </div>
+                <div class="hero-stat">
+                  <strong>100%</strong>
+                  <span>Confiável</span>
+                </div>
+                <div class="hero-stat">
+                  <strong>Rápido</strong>
+                  <span>Atendimento</span>
+                </div>
+                <div class="hero-stat">
+                  <strong>Local</strong>
+                  <span>Mogi das Cruzes</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BREAK PATTERN -->
+  <section class="break-pattern">
+    <div class="container">
+      <p>Pare de perder tempo com <span>vários fornecedores</span>. Resolva tudo em um só lugar.</p>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="problem section">
+    <div class="container">
+      <div class="problem-grid">
+        <div class="fade-up">
+          <span class="tag">O Problema</span>
+          <h2>Você já passou por isso?</h2>
+          <p class="problem-intro">Quem trabalha na indústria sabe: encontrar um fornecedor de confiança em Mogi das Cruzes não é tarefa fácil.</p>
+          <ul class="pain-list">
+            <li class="pain-item">
+              <div class="pain-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+              </div>
+              <div>
+                <strong>Fornecedores que somem</strong>
+                <span>Sem resposta, sem prazo, sem comprometimento com a sua demanda.</span>
+              </div>
+            </li>
+            <li class="pain-item">
+              <div class="pain-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <strong>Atrasos que travam sua operação</strong>
+                <span>Entrega que não chega e prejudica todo o seu cronograma.</span>
+              </div>
+            </li>
+            <li class="pain-item">
+              <div class="pain-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              </div>
+              <div>
+                <strong>Produto específico que ninguém tem</strong>
+                <span>Vai de loja em loja e sai sem o que precisava.</span>
+              </div>
+            </li>
+            <li class="pain-item">
+              <div class="pain-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <div>
+                <strong>Atendimento lento e burocrático</strong>
+                <span>Formulários, esperas, 3 pessoas para responder um simples orçamento.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="problem-visual fade-up">
+          <div class="problem-card">
+            <h4>Tempo perdido com múltiplos fornecedores</h4>
+            <p>Cada hora buscando produto é uma hora que sua equipe deixa de ser produtiva. O custo invisível é alto.</p>
+          </div>
+          <div class="problem-card accent">
+            <h4>Orçamento que virou dor de cabeça</h4>
+            <p>Pedir preço em 4 lugares diferentes, esperar dias para ter resposta e ainda correr o risco de comprar errado.</p>
+          </div>
+          <div class="problem-card">
+            <h4>Sem um parceiro de confiança na região</h4>
+            <p>Na hora que mais precisa, não tem ninguém local para resolver rápido. Só grandes centros com frete caro e prazo longo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section class="solution section">
+    <div class="container">
+      <div class="solution-grid">
+        <div class="fade-up">
+          <span class="tag">A Solução</span>
+          <h2>A Twuco resolve tudo isso — direto no WhatsApp</h2>
+          <p class="solution-intro">Somos um fornecedor industrial completo, com atendimento humano, rápido e sem enrolação. Você fala com quem decide.</p>
+          <div class="solution-points">
+            <div class="sol-point">
+              <div class="sol-num">1</div>
+              <div>
+                <strong>Fale direto com quem atende</strong>
+                <span>Sem call center, sem formulário. Uma mensagem no WhatsApp e já está resolvido.</span>
+              </div>
+            </div>
+            <div class="sol-point">
+              <div class="sol-num">2</div>
+              <div>
+                <strong>Orçamento ágil e transparente</strong>
+                <span>Receba o preço rapidamente, sem surpresas e com tudo claro desde o início.</span>
+              </div>
+            </div>
+            <div class="sol-point">
+              <div class="sol-num">3</div>
+              <div>
+                <strong>Grande variedade em um só lugar</strong>
+                <span>De ferramentas a suprimentos industriais — você encontra o que precisa sem ir além.</span>
+              </div>
+            </div>
+            <div class="sol-point">
+              <div class="sol-num">4</div>
+              <div>
+                <strong>Fornecedor local, entrega ágil</strong>
+                <span>Estamos em Mogi das Cruzes. Sem frete abusivo de grandes centros. Perto de você.</span>
+              </div>
+            </div>
+          </div>
+          <a href="https://wa.me/5511919655502" target="_blank" rel="noopener" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.557 4.117 1.535 5.845L.057 23.926l6.234-1.455A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.005-1.374l-.358-.214-3.706.866.88-3.614-.234-.371A9.818 9.818 0 0 1 12 2.182c5.432 0 9.818 4.386 9.818 9.818S17.432 21.818 12 21.818z"/></svg>
+            Quero conhecer a Twuco
+          </a>
+        </div>
+        <div class="solution-visual fade-up">
+          <h3>Por que a Twuco é diferente?</h3>
+          <p>Resultados reais para quem precisa de agilidade no dia a dia</p>
+          <div class="sol-vis-stats">
+            <div class="sol-vis-stat">
+              <strong>Rápido</strong>
+              <span>Resposta no WhatsApp</span>
+            </div>
+            <div class="sol-vis-stat">
+              <strong>Local</strong>
+              <span>Mogi das Cruzes - SP</span>
+            </div>
+            <div class="sol-vis-stat">
+              <strong>+5</strong>
+              <span>Categorias disponíveis</span>
+            </div>
+            <div class="sol-vis-stat">
+              <strong>Zero</strong>
+              <span>Burocracia na compra</span>
+            </div>
+          </div>
+          <div style="margin-top:24px; padding:20px; background:rgba(232,80,10,0.15); border-radius:12px; border:1px solid rgba(232,80,10,0.25);">
+            <p style="color:rgba(255,255,255,0.8); font-size:14px; margin:0; font-style:italic;">"Atendimento rápido e produto disponível — isso é o que todo profissional precisa para não travar a obra."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="benefits section">
+    <div class="container">
+      <span class="tag" style="display:block; text-align:center;">Por que escolher a Twuco</span>
+      <h2>Tudo que você precisa em um fornecedor</h2>
+      <p class="benefits-sub">Cada detalhe foi pensado para facilitar a sua compra e agilizar a sua operação.</p>
+      <div class="benefits-grid">
+        <div class="benefit-card fade-up">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Entrega rápida na região</h3>
+          <p>Estamos em Mogi das Cruzes e atendemos a região. Menos frete, mais agilidade, produto na sua mão sem demora.</p>
+        </div>
+        <div class="benefit-card fade-up">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.557 4.117 1.535 5.845L.057 23.926l6.234-1.455A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.005-1.374l-.358-.214-3.706.866.88-3.614-.234-.371A9.818 9.818 0 0 1 12 2.182c5.432 0 9.818 4.386 9.818 9.818S17.432 21.818 12 21.818z"/></svg>
+          </div>
+          <h3>Atendimento direto via WhatsApp</h3>
+          <p>Fale com quem decide. Manda a mensagem, recebe o orçamento. Sem formulário, sem espera, sem enrolação.</p>
+        </div>
+        <div class="benefit-card fade-up">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+          </div>
+          <h3>Grande variedade de produtos</h3>
+          <p>Ferramentas, materiais de instalação, construção, pintura e mais. Você resolve em um único contato.</p>
+        </div>
+        <div class="benefit-card fade-up">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Compra fácil e sem burocracia</h3>
+          <p>O processo é simples: fale conosco, receba o orçamento e feche o pedido. Rápido do início ao fim.</p>
+        </div>
+        <div class="benefit-card fade-up">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Suporte especializado</h3>
+          <p>Não sabe qual produto usar? A gente orienta. Nosso atendimento vai além da venda — queremos que você acerte na compra.</p>
+        </div>
+        <div class="benefit-card fade-up">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Fornecedor de confiança local</h3>
+          <p>CNPJ ativo, empresa estabelecida em Mogi das Cruzes. Compre de quem tem compromisso com a região.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products section">
+    <div class="container">
+      <span class="tag" style="display:block; text-align:center;">Categorias</span>
+      <h2>O que a Twuco fornece</h2>
+      <p class="products-sub">Produtos para indústria, obras e manutenção — com estoque variado para atender sua demanda.</p>
+      <div class="products-grid">
+        <div class="product-card fade-up">
+          <div class="product-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3>Ferramentas em Geral</h3>
+        </div>
+        <div class="product-card fade-up">
+          <div class="product-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3>Materiais para Instalação</h3>
+        </div>
+        <div class="product-card fade-up">
+          <div class="product-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Materiais para Construção</h3>
+        </div>
+        <div class="product-card fade-up">
+          <div class="product-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="4.93" y1="4.93" x2="9.17" y2="9.17"/><line x1="14.83" y1="14.83" x2="19.07" y2="19.07"/><line x1="14.83" y1="9.17" x2="19.07" y2="4.93"/><line x1="14.83" y1="9.17" x2="18.36" y2="5.64"/><line x1="4.93" y1="19.07" x2="9.17" y2="14.83"/></svg>
+          </div>
+          <h3>Acessórios para Pintura</h3>
+        </div>
+        <div class="product-card fade-up">
+          <div class="product-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Suprimentos Industriais (MRO)</h3>
+        </div>
+      </div>
+      <div class="products-cta">
+        <a href="https://wa.me/5511919655502" target="_blank" rel="noopener" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.557 4.117 1.535 5.845L.057 23.926l6.234-1.455A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.005-1.374l-.358-.214-3.706.866.88-3.614-.234-.371A9.818 9.818 0 0 1 12 2.182c5.432 0 9.818 4.386 9.818 9.818S17.432 21.818 12 21.818z"/></svg>
+          Consultar disponibilidade agora
+        </a>
+        <p style="font-size:13px; color:var(--gray-400); margin-top:12px;">Atendimento imediato · Sem compromisso</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials section">
+    <div class="container">
+      <span class="tag" style="display:block; text-align:center;">Depoimentos</span>
+      <h2>O que dizem os nossos clientes</h2>
+      <p class="testimonials-sub">Empresas e profissionais da região que confiam na Twuco para suprir suas necessidades.</p>
+      <div class="testi-grid">
+        <div class="testi-card fade-up">
+          <div class="testi-quote">"</div>
+          <div class="stars">★★★★★</div>
+          <p>Precisava de materiais para instalação elétrica com urgência e a Twuco resolveu no mesmo dia. Atendimento rápido e produto de qualidade. Virei cliente fixo.</p>
+          <div class="testi-author">
+            <div class="testi-avatar">RC</div>
+            <div>
+              <strong>Ricardo C.</strong>
+              <span>Eletricista autônomo — Mogi das Cruzes</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card fade-up">
+          <div class="testi-quote">"</div>
+          <div class="stars">★★★★★</div>
+          <p>Nossa empresa faz compras mensais de suprimentos e a Twuco virou o nosso fornecedor principal. Preço justo, entrega pontual e o atendimento pelo WhatsApp é muito prático.</p>
+          <div class="testi-author">
+            <div class="testi-avatar">MF</div>
+            <div>
+              <strong>Mariana F.</strong>
+              <span>Gerente de manutenção — Indústria local</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card fade-up">
+          <div class="testi-quote">"</div>
+          <div class="stars">★★★★★</div>
+          <p>Procurei um produto específico que não achava em nenhum lugar aqui na região. Mandei mensagem para a Twuco e eles conseguiram em poucos dias. Recomendo demais.</p>
+          <div class="testi-author">
+            <div class="testi-avatar">JS</div>
+            <div>
+              <strong>José S.</strong>
+              <span>Mestre de obras — Suzano e região</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTHORITY -->
+  <section class="authority">
+    <div class="container">
+      <span class="tag" style="background:rgba(232,80,10,0.2); color:#FF9166; border:1px solid rgba(232,80,10,0.3); display:inline-block; margin-bottom:20px;">Quem somos</span>
+      <h2>Twuco Suprimentos Industriais e MRO</h2>
+      <p>Empresa estabelecida em Mogi das Cruzes, com CNPJ ativo e compromisso real com o fornecimento industrial da região. Trabalhamos para ser o parceiro que sua empresa pode contar.</p>
+      <div class="authority-badges">
+        <div class="auth-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          CNPJ Ativo e Regularizado
+        </div>
+        <div class="auth-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Mogi das Cruzes - SP
+        </div>
+        <div class="auth-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Atendimento ágil e direto
+        </div>
+        <div class="auth-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Atende empresas e autônomos
+        </div>
+      </div>
+      <span class="auth-cnpj">CNPJ: 47.295.708/0001-80</span>
+    </div>
+  </section>
+
+  <!-- OFFER -->
+  <section class="offer">
+    <div class="container">
+      <div class="offer-inner">
+        <h2>Solicite seu orçamento agora e receba retorno rápido no WhatsApp</h2>
+        <p>Descreva o que precisa, manda a mensagem — e em breve você tem o preço na mão, sem complicação.</p>
+        <div class="offer-features">
+          <div class="offer-feat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Resposta rápida
+          </div>
+          <div class="offer-feat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Sem compromisso
+          </div>
+          <div class="offer-feat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Preço transparente
+          </div>
+          <div class="offer-feat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Atendimento imediato
+          </div>
+        </div>
+        <a href="https://wa.me/5511919655502" target="_blank" rel="noopener" class="btn btn-white btn-lg">
+          <svg viewBox="0 0 24 24" fill="#25D366" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.557 4.117 1.535 5.845L.057 23.926l6.234-1.455A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.005-1.374l-.358-.214-3.706.866.88-3.614-.234-.371A9.818 9.818 0 0 1 12 2.182c5.432 0 9.818 4.386 9.818 9.818S17.432 21.818 12 21.818z"/></svg>
+          Pedir orçamento no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- OBJECTIONS -->
+  <section class="objections section">
+    <div class="container">
+      <span class="tag" style="display:block; text-align:center;">Sem desculpas</span>
+      <h2>Quebrando as objeções de vez</h2>
+      <p class="objections-sub">Entendemos que toda compra gera dúvidas. Por isso, somos diretos com o que você vai encontrar na Twuco.</p>
+      <div class="obj-grid">
+        <div class="obj-card fade-up">
+          <div class="obj-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Atendimento verdadeiramente rápido</h3>
+          <p>Sem "entraremos em contato em breve". Quando você manda mensagem, alguém de verdade responde e resolve. Simples assim.</p>
+        </div>
+        <div class="obj-card fade-up">
+          <div class="obj-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Produtos com qualidade garantida</h3>
+          <p>Trabalhamos com produtos de qualidade para atender exigências industriais. Não vendemos qualquer coisa — queremos que você volte.</p>
+        </div>
+        <div class="obj-card fade-up">
+          <div class="obj-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3>Compra direta e sem burocracia</h3>
+          <p>Sem cadastros desnecessários, sem aprovações em 3 etapas. Você pede, recebe o valor e decide. Direto ao ponto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="container">
+      <h2>Pronto para ter um fornecedor <br>que realmente entrega?</h2>
+      <p>Fale com a Twuco agora e receba seu orçamento de forma rápida, direta e sem enrolação.</p>
+      <div class="final-cta-buttons">
+        <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+          <a href="https://wa.me/5511919655502" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.557 4.117 1.535 5.845L.057 23.926l6.234-1.455A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.005-1.374l-.358-.214-3.706.866.88-3.614-.234-.371A9.818 9.818 0 0 1 12 2.182c5.432 0 9.818 4.386 9.818 9.818S17.432 21.818 12 21.818z"/></svg>
+            Solicitar orçamento no WhatsApp
+          </a>
+          <span style="font-size:13px; color:rgba(255,255,255,0.4);">Atendimento imediato · Sem compromisso</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq section">
+    <div class="container">
+      <h2>Perguntas frequentes</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q">
+            Vocês atendem empresas?
+            <div class="faq-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </div>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">Sim! Atendemos tanto empresas quanto profissionais autônomos como eletricistas, pedreiros, pintores e técnicos. Não importa o tamanho do pedido — entre em contato e a gente resolve.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">
+            Fazem entrega?
+            <div class="faq-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </div>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">Sim, realizamos entregas em Mogi das Cruzes e região. As condições de prazo e frete são combinadas diretamente no atendimento via WhatsApp, de acordo com o pedido e a localização.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">
+            Trabalham com quais produtos?
+            <div class="faq-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </div>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">Trabalhamos com ferramentas em geral, materiais para instalação (elétrica, hidráulica), materiais para construção, acessórios para pintura e suprimentos industriais MRO. Caso precise de algo específico, nos consulte — buscamos atender a sua demanda.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">
+            Como solicitar um orçamento?
+            <div class="faq-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </div>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">É simples: basta clicar em qualquer botão de WhatsApp nesta página e nos enviar a descrição dos produtos que precisa. Respondemos com agilidade, sem formulários ou cadastros obrigatórios.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Twuco Suprimentos Industriais e MRO</h3>
+          <p>Fornecedor industrial completo em Mogi das Cruzes e região. Ferramentas, materiais e suprimentos com atendimento rápido e direto.</p>
+          <div class="footer-contact">
+            <a href="https://wa.me/5511919655502" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.557 4.117 1.535 5.845L.057 23.926l6.234-1.455A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.005-1.374l-.358-.214-3.706.866.88-3.614-.234-.371A9.818 9.818 0 0 1 12 2.182c5.432 0 9.818 4.386 9.818 9.818S17.432 21.818 12 21.818z"/></svg>
+              (11) 91965-5502
+            </a>
+            <a href="mailto:twucosuprimentos@gmail.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              twucosuprimentos@gmail.com
+            </a>
+            <a href="#">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Mogi das Cruzes – SP
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Produtos</h4>
+          <ul class="footer-links">
+            <li><a href="https://wa.me/5511919655502" target="_blank" rel="noopener">Ferramentas em Geral</a></li>
+            <li><a href="https://wa.me/5511919655502" target="_blank" rel="noopener">Materiais para Instalação</a></li>
+            <li><a href="https://wa.me/5511919655502" target="_blank" rel="noopener">Materiais para Construção</a></li>
+            <li><a href="https://wa.me/5511919655502" target="_blank" rel="noopener">Acessórios para Pintura</a></li>
+            <li><a href="https://wa.me/5511919655502" target="_blank" rel="noopener">Suprimentos MRO</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <ul class="footer-links">
+            <li><a href="https://wa.me/5511919655502" target="_blank" rel="noopener">Solicitar orçamento</a></li>
+            <li><a href="mailto:twucosuprimentos@gmail.com">Enviar e-mail</a></li>
+            <li><a href="#">Mogi das Cruzes - SP</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Twuco Suprimentos Industriais e MRO. Todos os direitos reservados.</span>
+        <span class="footer-cnpj">CNPJ: 47.295.708/0001-80</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <div class="wa-float" id="waFloat">
+    <div class="wa-bubble" id="waBubble">💬 Fale conosco agora!</div>
+    <a href="https://wa.me/5511919655502" target="_blank" rel="noopener" class="wa-btn" id="waBtn">
+      <div class="wa-pulse"></div>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.557 4.117 1.535 5.845L.057 23.926l6.234-1.455A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.005-1.374l-.358-.214-3.706.866.88-3.614-.234-.371A9.818 9.818 0 0 1 12 2.182c5.432 0 9.818 4.386 9.818 9.818S17.432 21.818 12 21.818z"/></svg>
+    </a>
+  </div>
+
+  <script>
+    // Nav scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        document.querySelectorAll('.faq-a').forEach(a => { a.style.maxHeight = '0'; a.style.padding = '0 28px'; });
+        if (!isOpen) {
+          item.classList.add('open');
+          const ans = item.querySelector('.faq-a');
+          ans.style.maxHeight = ans.scrollHeight + 'px';
+        }
+      });
+    });
+
+    // Scroll fade-up animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // WhatsApp bubble show
+    setTimeout(() => {
+      document.getElementById('waBubble').classList.add('show');
+    }, 3000);
+    document.getElementById('waBtn').addEventListener('mouseenter', () => {
+      document.getElementById('waBubble').classList.add('show');
+    });
+  </script>
+</body>
+</html>
